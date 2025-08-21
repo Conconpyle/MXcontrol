@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MX Control - Professional Novastar Controller</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Connection Panel -->
+    <div id="connectionPanel" class="connection-panel">
+        <div class="connection-container">
+            <div class="logo-section">
+                <i class="fas fa-layer-group"></i>
+                <h1>MX Control</h1>
+                <p>Professional Novastar Controller</p>
+            </div>
+            <div class="connection-form">
+                <h2>Connect to Controller</h2>
+                <div class="form-group">
+                    <label for="ipAddress">Controller IP Address</label>
+                    <input type="text" id="ipAddress" placeholder="192.168.1.100" value="192.168.1.100">
+                </div>
+                <div class="form-group">
+                    <label for="port">Port</label>
+                    <input type="text" id="port" placeholder="9999" value="9999">
+                </div>
+                <button id="connectBtn" class="connect-btn">
+                    <i class="fas fa-plug"></i> Connect
+                </button>
+                <div id="connectionStatus" class="connection-status"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="mainApp" class="main-app hidden">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-left">
+                <div class="logo">
+                    <i class="fas fa-layer-group"></i>
+                    <span>MX Control</span>
+                </div>
+                <div class="connection-info">
+                    <span class="status-indicator online"></span>
+                    <span id="connectedIP">192.168.1.100:9999</span>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="screen-selector">
+                    <label>Screen:</label>
+                    <select id="screenSelect">
+                        <option value="">Loading...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="header-right">
+                <button id="refreshBtn" class="icon-btn" title="Refresh">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+                <button id="apiDocsBtn" class="icon-btn" title="API Documentation">
+                    <i class="fas fa-book"></i>
+                </button>
+                <button id="disconnectBtn" class="icon-btn" title="Disconnect">
+                    <i class="fas fa-power-off"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="app-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Input Sources -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h3><i class="fas fa-video"></i> Input Sources</h3>
+                        <button class="add-btn" id="addInputBtn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div id="inputsList" class="inputs-list">
+                        <!-- Input sources will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Presets -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h3><i class="fas fa-bookmark"></i> Presets</h3>
+                    </div>
+                    <div id="presetsList" class="presets-list">
+                        <!-- Presets will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Quick Controls -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h3><i class="fas fa-sliders-h"></i> Quick Controls</h3>
+                    </div>
+                    <div class="quick-controls">
+                        <div class="control-group">
+                            <label>Brightness</label>
+                            <div class="slider-container">
+                                <input type="range" id="brightnessSlider" min="0" max="100" value="100">
+                                <span id="brightnessValue">100%</span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label>Display Mode</label>
+                            <div class="button-group">
+                                <button id="normalBtn" class="mode-btn active">Normal</button>
+                                <button id="freezeBtn" class="mode-btn">Freeze</button>
+                                <button id="blackoutBtn" class="mode-btn">Blackout</button>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label>Gamma</label>
+                            <div class="slider-container">
+                                <input type="range" id="gammaSlider" min="10" max="40" value="22">
+                                <span id="gammaValue">2.2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Canvas Area -->
+            <main class="canvas-area">
+                <div class="canvas-toolbar">
+                    <div class="toolbar-left">
+                        <button id="fitToScreenBtn" class="toolbar-btn">
+                            <i class="fas fa-expand"></i> Fit to Screen
+                        </button>
+                        <button id="gridToggleBtn" class="toolbar-btn">
+                            <i class="fas fa-th"></i> Grid
+                        </button>
+                        <div class="zoom-controls">
+                            <button id="zoomOutBtn" class="zoom-btn">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <span id="zoomLevel">100%</span>
+                            <button id="zoomInBtn" class="zoom-btn">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="toolbar-right">
+                        <span class="canvas-info">
+                            Resolution: <span id="canvasResolution">1920x1080</span>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="canvas-container">
+                    <div id="screenCanvas" class="screen-canvas">
+                        <!-- Layers will be rendered here -->
+                        <div class="canvas-grid hidden"></div>
+                    </div>
+                </div>
+
+                <!-- Layer Properties Panel -->
+                <div id="layerProperties" class="layer-properties hidden">
+                    <div class="properties-header">
+                        <h3>Layer Properties</h3>
+                        <button id="closePropertiesBtn" class="close-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="properties-content">
+                        <div class="property-group">
+                            <label>Layer Name</label>
+                            <input type="text" id="layerName" placeholder="Layer Name">
+                        </div>
+                        <div class="property-group">
+                            <label>Input Source</label>
+                            <select id="layerInputSource">
+                                <option value="">Select Input</option>
+                            </select>
+                        </div>
+                        <div class="property-row">
+                            <div class="property-group">
+                                <label>X Position</label>
+                                <input type="number" id="layerX" min="0">
+                            </div>
+                            <div class="property-group">
+                                <label>Y Position</label>
+                                <input type="number" id="layerY" min="0">
+                            </div>
+                        </div>
+                        <div class="property-row">
+                            <div class="property-group">
+                                <label>Width</label>
+                                <input type="number" id="layerWidth" min="1">
+                            </div>
+                            <div class="property-group">
+                                <label>Height</label>
+                                <input type="number" id="layerHeight" min="1">
+                            </div>
+                        </div>
+                        <div class="property-group">
+                            <label>Z-Order</label>
+                            <input type="number" id="layerZOrder" min="0">
+                        </div>
+                        <div class="property-actions">
+                            <button id="applyLayerBtn" class="apply-btn">Apply Changes</button>
+                            <button id="deleteLayerBtn" class="delete-btn">Delete Layer</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Right Panel -->
+            <aside class="right-panel">
+                <!-- Active Layers -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h3><i class="fas fa-layers"></i> Active Layers</h3>
+                        <button class="add-btn" id="addLayerBtn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div id="layersList" class="layers-list">
+                        <!-- Active layers will be listed here -->
+                    </div>
+                </div>
+
+                <!-- Cabinet Info -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h3><i class="fas fa-server"></i> Cabinet Info</h3>
+                    </div>
+                    <div id="cabinetInfo" class="cabinet-info">
+                        <div class="info-item">
+                            <span class="info-label">Total Cabinets:</span>
+                            <span id="totalCabinets">0</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Resolution:</span>
+                            <span id="screenResolution">0x0</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Status:</span>
+                            <span id="screenStatus" class="status-badge">Unknown</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Status Bar -->
+        <footer class="status-bar">
+            <div class="status-left">
+                <span id="statusMessage">Ready</span>
+            </div>
+            <div class="status-right">
+                <span id="lastUpdate">Last update: Never</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- API Documentation Modal -->
+    <div id="apiDocsModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>API Command Reference</h2>
+                <button class="modal-close" id="closeApiDocsBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="apiDocsList" class="api-docs-list">
+                    <!-- API documentation will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/api-client.js"></script>
+    <script src="js/ui-manager.js"></script>
+    <script src="js/layer-manager.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
