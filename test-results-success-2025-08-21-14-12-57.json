@@ -1,0 +1,1291 @@
+﻿[
+    {
+        "timestamp":  "2025-08-21 14:12:50",
+        "method":  "GET",
+        "name":  "getScreenInfo",
+        "description":  "Retrieve Screen Information",
+        "status":  "200",
+        "duration":  "47ms",
+        "endpoint":  "/screen",
+        "response":  {
+                         "code":  0,
+                         "data":  {
+                                      "screens":  [
+                                                      {
+                                                          "screenID":  "{7e9cd858-780b-40d1-9f20-0fa0d53a06ce}",
+                                                          "screenName":  "Screen_004303",
+                                                          "createTime":  "2025-06-11 14:37:19",
+                                                          "workingMode":  1,
+                                                          "lowLatency":  false,
+                                                          "layoutMode":  0,
+                                                          "screenIndex":  0,
+                                                          "position":  {
+                                                                           "x":  0,
+                                                                           "y":  0
+                                                                       },
+                                                          "screenGroupID":  "{bc762e67-c4e2-4145-80c3-ec3fc257611c}",
+                                                          "ordinal":  0,
+                                                          "canvases":  [
+                                                                           {
+                                                                               "canvasID":  2048,
+                                                                               "backupType":  0,
+                                                                               "outputCardId":  8,
+                                                                               "outputCardModeId":  0,
+                                                                               "canvasSerialNum":  0,
+                                                                               "inputID":  0,
+                                                                               "size":  {
+                                                                                            "width":  1600,
+                                                                                            "height":  1600
+                                                                                        },
+                                                                               "isCustomSize":  true,
+                                                                               "ordinal":  0,
+                                                                               "position":  {
+                                                                                                "x":  41,
+                                                                                                "y":  34
+                                                                                            },
+                                                                               "rectSize":  {
+                                                                                                "width":  600,
+                                                                                                "height":  200
+                                                                                            },
+                                                                               "cabinets":  [
+                                                                                                {
+                                                                                                    "cabinetID":  8098577582653440,
+                                                                                                    "connectID":  0,
+                                                                                                    "outputID":  2048,
+                                                                                                    "pageID":  0,
+                                                                                                    "position":  {
+                                                                                                                     "x":  263,
+                                                                                                                     "y":  540
+                                                                                                                 },
+                                                                                                    "size":  {
+                                                                                                                 "width":  600,
+                                                                                                                 "height":  200
+                                                                                                             },
+                                                                                                    "angle":  0,
+                                                                                                    "lockStatus":  true
+                                                                                                }
+                                                                                            ],
+                                                                               "groups":  [
+                                                                                              {
+                                                                                                  "groupID":  "{93e58bad-29d7-4bf2-8ec5-a12ed542ec86}",
+                                                                                                  "groupName":  "Group 1",
+                                                                                                  "groupColor":  {
+                                                                                                                     "r":  0,
+                                                                                                                     "g":  0,
+                                                                                                                     "b":  255
+                                                                                                                 },
+                                                                                                  "cabinetIDs":  [
+                                                                                                                     8098577582653440
+                                                                                                                 ],
+                                                                                                  "angle":  0
+                                                                                              }
+                                                                                          ],
+                                                                               "maxFrameRate":  152.34,
+                                                                               "layoutLines":  null,
+                                                                               "zorder":  0,
+                                                                               "frequencyPhaseStatus":  0,
+                                                                               "lastSize":  {
+                                                                                                "width":  0,
+                                                                                                "height":  0
+                                                                                            }
+                                                                           }
+                                                                       ],
+                                                          "layersInWorkingMode":  [
+                                                                                      {
+                                                                                          "workingMode":  0,
+                                                                                          "layerLayoutMode":  1,
+                                                                                          "layers":  [
+                                                                                                         {
+                                                                                                             "id":  1,
+                                                                                                             "layerIndex":  1,
+                                                                                                             "canvasId":  0,
+                                                                                                             "source":  224,
+                                                                                                             "position":  {
+                                                                                                                              "x":  41,
+                                                                                                                              "y":  34
+                                                                                                                          },
+                                                                                                             "zOrder":  1,
+                                                                                                             "lock":  false,
+                                                                                                             "border":  {
+                                                                                                                            "enable":  false,
+                                                                                                                            "width":  0,
+                                                                                                                            "color":  "@{r=255; g=0; b=0}"
+                                                                                                                        },
+                                                                                                             "cut":  {
+                                                                                                                         "enable":  false,
+                                                                                                                         "rect":  "@{x=0; y=0; width=64; height=95}"
+                                                                                                                     },
+                                                                                                             "scaler":  {
+                                                                                                                            "width":  3840,
+                                                                                                                            "height":  1080
+                                                                                                                        },
+                                                                                                             "sourceSize":  {
+                                                                                                                                "width":  1600,
+                                                                                                                                "height":  1600
+                                                                                                                            },
+                                                                                                             "followState":  false,
+                                                                                                             "layerInCanvasId":  2048,
+                                                                                                             "layerSortId":  0,
+                                                                                                             "gridId":  0
+                                                                                                         }
+                                                                                                     ]
+                                                                                      },
+                                                                                      {
+                                                                                          "workingMode":  1,
+                                                                                          "layerLayoutMode":  0,
+                                                                                          "layers":  [
+                                                                                                         {
+                                                                                                             "id":  65538,
+                                                                                                             "layerIndex":  0,
+                                                                                                             "canvasId":  0,
+                                                                                                             "source":  32,
+                                                                                                             "position":  {
+                                                                                                                              "x":  41,
+                                                                                                                              "y":  34
+                                                                                                                          },
+                                                                                                             "zOrder":  2147483645,
+                                                                                                             "lock":  false,
+                                                                                                             "border":  {
+                                                                                                                            "enable":  false,
+                                                                                                                            "width":  0,
+                                                                                                                            "color":  "@{r=0; g=0; b=0}"
+                                                                                                                        },
+                                                                                                             "cut":  {
+                                                                                                                         "enable":  false,
+                                                                                                                         "rect":  "@{x=0; y=0; width=0; height=0}"
+                                                                                                                     },
+                                                                                                             "scaler":  {
+                                                                                                                            "width":  1600,
+                                                                                                                            "height":  1600
+                                                                                                                        },
+                                                                                                             "sourceSize":  {
+                                                                                                                                "width":  1600,
+                                                                                                                                "height":  1600
+                                                                                                                            },
+                                                                                                             "followState":  false,
+                                                                                                             "layerInCanvasId":  0,
+                                                                                                             "layerSortId":  0,
+                                                                                                             "gridId":  0
+                                                                                                         }
+                                                                                                     ]
+                                                                                      }
+                                                                                  ],
+                                                          "inputPort":  {
+                                                                            "CardId":  0,
+                                                                            "HwCardId":  0,
+                                                                            "ModelId":  5138,
+                                                                            "LogicId":  256,
+                                                                            "HardwareID":  "",
+                                                                            "GroupId":  32,
+                                                                            "Order":  0,
+                                                                            "InputDetailInfo":  {
+                                                                                                    "SlotId":  1,
+                                                                                                    "PortIndex":  0,
+                                                                                                    "GroupId":  32,
+                                                                                                    "Type":  1,
+                                                                                                    "InputType":  4,
+                                                                                                    "SourceNumber":  1,
+                                                                                                    "MaxBandWidth":  6000,
+                                                                                                    "MaxWidth":  4092,
+                                                                                                    "MaxHeight":  4095,
+                                                                                                    "MinWidth":  800,
+                                                                                                    "MinHeight":  600,
+                                                                                                    "WidthStepVal":  4,
+                                                                                                    "HeightStepVal":  0,
+                                                                                                    "MaxSourceDepth":  12,
+                                                                                                    "InterlacedInputSupport":  0,
+                                                                                                    "HDCPVersion":  4,
+                                                                                                    "InterfaceUseState":  0,
+                                                                                                    "YcbcrSwapIn":  0,
+                                                                                                    "IsSupportHDR":  false,
+                                                                                                    "SilkNumber":  0,
+                                                                                                    "MaxCapacity":  0,
+                                                                                                    "MinCapacity":  0,
+                                                                                                    "SupportResolution":  "",
+                                                                                                    "SupportFrameRate":  "",
+                                                                                                    "DefaultWidth":  0,
+                                                                                                    "DefaultHeight":  0,
+                                                                                                    "DefaultFrameRate":  0,
+                                                                                                    "MaxBand":  0,
+                                                                                                    "MinBand":  0,
+                                                                                                    "Capacities":  ""
+                                                                                                },
+                                                                            "InputSrcInfo":  {
+                                                                                                 "InputType":  4,
+                                                                                                 "InputID":  256,
+                                                                                                 "ChannelId":  0,
+                                                                                                 "IsSupportHDR":  0,
+                                                                                                 "SourceStatus":  1,
+                                                                                                 "ColorSpaceType":  0,
+                                                                                                 "Range":  1,
+                                                                                                 "InterlacedInputFlag":  0,
+                                                                                                 "HDRSDRInformation":  0,
+                                                                                                 "CurrentSourceDepth":  0,
+                                                                                                 "SourceDetInColPixel":  1600,
+                                                                                                 "SourceDetInRowPixel":  1600,
+                                                                                                 "SourceFieldRate":  6000,
+                                                                                                 "HdcpState":  0,
+                                                                                                 "ColorGamut":  0,
+                                                                                                 "OverWriteColorGamut":  0,
+                                                                                                 "InPhase":  0,
+                                                                                                 "SourceHTotal":  1760,
+                                                                                                 "SourceVTotal":  1646,
+                                                                                                 "SourceHSyncPulse":  32,
+                                                                                                 "SourceVSyncPulse":  10,
+                                                                                                 "SourceHFrontPorch":  3,
+                                                                                                 "SourceVFrontPorch":  48,
+                                                                                                 "SourceHBackPorch":  80,
+                                                                                                 "SourceVBackPorch":  33,
+                                                                                                 "InterfaceUseState":  0,
+                                                                                                 "XOffset":  0,
+                                                                                                 "YOffset":  0,
+                                                                                                 "IP":  "",
+                                                                                                 "Port":  0,
+                                                                                                 "FiberPortLinkStatus":  null,
+                                                                                                 "FiberNetConfig":  {
+                                                                                                                        "masterNetConfig":  {
+                                                                                                                                                "targetIp":  "",
+                                                                                                                                                "targetPort":  0,
+                                                                                                                                                "videoStreamIp":  "",
+                                                                                                                                                "dhcp":  false,
+                                                                                                                                                "localIp":  "",
+                                                                                                                                                "netMask":  "",
+                                                                                                                                                "gateWay":  ""
+                                                                                                                                            },
+                                                                                                                        "backupNetConfig":  {
+                                                                                                                                                "targetIp":  "",
+                                                                                                                                                "targetPort":  0,
+                                                                                                                                                "videoStreamIp":  "",
+                                                                                                                                                "dhcp":  false,
+                                                                                                                                                "localIp":  "",
+                                                                                                                                                "netMask":  "",
+                                                                                                                                                "gateWay":  ""
+                                                                                                                                            }
+                                                                                                                    }
+                                                                                             },
+                                                                            "MetaData":  {
+                                                                                             "infoFrameType":  0,
+                                                                                             "infoFrameVersion":  0,
+                                                                                             "infoFramLength":  0,
+                                                                                             "checksum":  0,
+                                                                                             "sourceTye":  0,
+                                                                                             "maxLight":  0,
+                                                                                             "minMasterDisplayLight":  0,
+                                                                                             "maxMasterDisplayLight":  0,
+                                                                                             "maxContentLight":  0,
+                                                                                             "maxFrameAvgLight":  0,
+                                                                                             "whitePointX":  0,
+                                                                                             "whitePointY":  0
+                                                                                         },
+                                                                            "FirmwareVersion":  {
+                                                                                                    "VersionName":  "",
+                                                                                                    "VersionNumber":  "",
+                                                                                                    "VersionRemark":  "",
+                                                                                                    "FileNum":  ""
+                                                                                                }
+                                                                        },
+                                                          "masterFrameRate":  60,
+                                                          "selectedPageID":  0,
+                                                          "pageInfos":  [
+                                                                            {
+                                                                                "pageID":  0,
+                                                                                "pageName":  "Page 1",
+                                                                                "isShow":  true
+                                                                            },
+                                                                            {
+                                                                                "pageID":  1,
+                                                                                "pageName":  "Page 2",
+                                                                                "isShow":  false
+                                                                            },
+                                                                            {
+                                                                                "pageID":  2,
+                                                                                "pageName":  "Page 3",
+                                                                                "isShow":  false
+                                                                            },
+                                                                            {
+                                                                                "pageID":  3,
+                                                                                "pageName":  "Page 4",
+                                                                                "isShow":  false
+                                                                            },
+                                                                            {
+                                                                                "pageID":  4,
+                                                                                "pageName":  "Page 5",
+                                                                                "isShow":  false
+                                                                            },
+                                                                            {
+                                                                                "pageID":  5,
+                                                                                "pageName":  "Page 6",
+                                                                                "isShow":  false
+                                                                            },
+                                                                            {
+                                                                                "pageID":  6,
+                                                                                "pageName":  "Page 7",
+                                                                                "isShow":  false
+                                                                            },
+                                                                            {
+                                                                                "pageID":  7,
+                                                                                "pageName":  "Page 8",
+                                                                                "isShow":  false
+                                                                            }
+                                                                        ],
+                                                          "outputMode":  0
+                                                      }
+                                                  ],
+                                      "screenGroups":  [
+                                                           {
+                                                               "screenGroupID":  "{bc762e67-c4e2-4145-80c3-ec3fc257611c}",
+                                                               "name":  "",
+                                                               "isShow":  false,
+                                                               "ordinal":  0
+                                                           }
+                                                       ]
+                                  },
+                         "message":  "Success"
+                     }
+    },
+    {
+        "timestamp":  "2025-08-21 14:12:51",
+        "method":  "PUT",
+        "name":  "setScreenBrightness",
+        "description":  "Set Screen Brightness",
+        "status":  "200",
+        "duration":  "75ms",
+        "endpoint":  "/screen/brightness",
+        "response":  {
+                         "code":  0,
+                         "data":  "",
+                         "message":  "Success"
+                     }
+    },
+    {
+        "timestamp":  "2025-08-21 14:12:51",
+        "method":  "PUT",
+        "name":  "setScreenGamma",
+        "description":  "Set Screen Gamma",
+        "status":  "200",
+        "duration":  "144ms",
+        "endpoint":  "/screen/gamma",
+        "response":  {
+                         "code":  0,
+                         "data":  "",
+                         "message":  "Success"
+                     }
+    },
+    {
+        "timestamp":  "2025-08-21 14:12:51",
+        "method":  "PUT",
+        "name":  "setDisplayMode",
+        "description":  "Set Display Mode (0=Normal, 1=Freeze, 2=Blackout)",
+        "status":  "200",
+        "duration":  "106ms",
+        "endpoint":  "/device/displaymode",
+        "response":  {
+                         "code":  0,
+                         "data":  "",
+                         "message":  "Success"
+                     }
+    },
+    {
+        "timestamp":  "2025-08-21 14:12:51",
+        "method":  "GET",
+        "name":  "getPresets",
+        "description":  "Retrieve Preset Information",
+        "status":  "200",
+        "duration":  "2ms",
+        "endpoint":  "/preset",
+        "response":  {
+                         "code":  0,
+                         "data":  {
+                                      "screenPresets":  [
+                                                            {
+                                                                "screenID":  "{7e9cd858-780b-40d1-9f20-0fa0d53a06ce}",
+                                                                "presets":  [
+                                                                                {
+                                                                                    "sequenceNumber":  1,
+                                                                                    "name":  "Preset 1",
+                                                                                    "state":  false,
+                                                                                    "sourceData":  true,
+                                                                                    "processingData":  false,
+                                                                                    "outputData":  false,
+                                                                                    "screenData":  true,
+                                                                                    "effectSwitch":  0,
+                                                                                    "presetUUID":  "{f8c36b4b-57f7-462b-b87c-0f063cb85aed}"
+                                                                                },
+                                                                                {
+                                                                                    "sequenceNumber":  2,
+                                                                                    "name":  "Preset 2",
+                                                                                    "state":  false,
+                                                                                    "sourceData":  true,
+                                                                                    "processingData":  false,
+                                                                                    "outputData":  false,
+                                                                                    "screenData":  true,
+                                                                                    "effectSwitch":  0,
+                                                                                    "presetUUID":  "{b7436cfc-ef95-4a6b-b3fe-5a5df263dc9b}"
+                                                                                },
+                                                                                {
+                                                                                    "sequenceNumber":  3,
+                                                                                    "name":  "Preset 3",
+                                                                                    "state":  false,
+                                                                                    "sourceData":  true,
+                                                                                    "processingData":  false,
+                                                                                    "outputData":  false,
+                                                                                    "screenData":  true,
+                                                                                    "effectSwitch":  0,
+                                                                                    "presetUUID":  "{6a80b70b-fa52-477c-bdab-40733c2f1b96}"
+                                                                                }
+                                                                            ]
+                                                            }
+                                                        ]
+                                  },
+                         "message":  "Success"
+                     }
+    },
+    {
+        "timestamp":  "2025-08-21 14:12:51",
+        "method":  "POST",
+        "name":  "applyPreset",
+        "description":  "Apply Preset",
+        "status":  "200",
+        "duration":  "44ms",
+        "endpoint":  "/preset/current/update",
+        "response":  {
+                         "code":  1,
+                         "data":  null,
+                         "message":  "setCurrentPreset error , invalid sequenceNumber : 0, screenID : {7e9cd858-780b-40d1-9f20-0fa0d53a06ce}"
+                     }
+    },
+    {
+        "timestamp":  "2025-08-21 14:12:52",
+        "method":  "GET",
+        "name":  "getInputSources",
+        "description":  "Retrieve Input Source List",
+        "status":  "200",
+        "duration":  "4ms",
+        "endpoint":  "/device/input/sources",
+        "response":  {
+                         "code":  0,
+                         "data":  [
+                                      {
+                                          "id":  3,
+                                          "cardId":  0,
+                                          "type":  7,
+                                          "name":  "3G-SDI 1",
+                                          "step":  0,
+                                          "sourceStatus":  0,
+                                          "supportFrameRate":  "23.98|24.00|25.00|29.97|30.00|47.95|48.00|50.00|59.94|60.00|71.93|72.00|75.00|100.00|119.88|120.00|143.86|144.00|240.00",
+                                          "supportResolution":  "1920*1080",
+                                          "maxwidth":  4096,
+                                          "maxheight":  4096,
+                                          "minwidth":  800,
+                                          "minheight":  600,
+                                          "actualResolution":  {
+                                                                   "height":  1920,
+                                                                   "width":  1920
+                                                               },
+                                          "actualRefreshRate":  60,
+                                          "bitDepth":  0,
+                                          "colorSpace":  "RGB 4:4:4",
+                                          "dynamicRange":  "SDR",
+                                          "gamut":  "",
+                                          "range":  0,
+                                          "scanMode":  0,
+                                          "inPhase":  false,
+                                          "defaultEDID":  {
+                                                              "resolution":  {
+                                                                                 "width":  1920,
+                                                                                 "height":  1080
+                                                                             },
+                                                              "refreshRate":  60,
+                                                              "isCustom":  false
+                                                          },
+                                          "usable":  true,
+                                          "groupId":  57,
+                                          "order":  0,
+                                          "isSupportHDR":  false,
+                                          "isSupportMetaData":  false,
+                                          "isSupportEDID":  false,
+                                          "isSupportInputOverride":  true,
+                                          "isSupportColorAdjust":  true,
+                                          "sourceChannel":  4,
+                                          "metaData":  {
+                                                           "infoFrameType":  0,
+                                                           "infoFrameVersion":  0,
+                                                           "infoFramLength":  0,
+                                                           "checksum":  0,
+                                                           "sourceTye":  0,
+                                                           "maxLight":  0,
+                                                           "minMasterDisplayLight":  0,
+                                                           "maxMasterDisplayLight":  0,
+                                                           "maxContentLight":  0,
+                                                           "maxFrameAvgLight":  0,
+                                                           "whitePointX":  0,
+                                                           "whitePointY":  0
+                                                       },
+                                          "isSupportHDRParams":  true,
+                                          "isSupportPQMaxCllChecked":  true,
+                                          "hdrList":  null,
+                                          "isEdidCustom":  false,
+                                          "isSupportCapacities":  false,
+                                          "supportCapacities":  null,
+                                          "ip":  "",
+                                          "port":  0,
+                                          "fiberPortLinkStatus":  null,
+                                          "isSupportIPAndPort":  false,
+                                          "maxCapacity":  0,
+                                          "minCapacity":  0
+                                      },
+                                      {
+                                          "id":  4,
+                                          "cardId":  0,
+                                          "type":  7,
+                                          "name":  "3G-SDI 2",
+                                          "step":  0,
+                                          "sourceStatus":  0,
+                                          "supportFrameRate":  "23.98|24.00|25.00|29.97|30.00|47.95|48.00|50.00|59.94|60.00|71.93|72.00|75.00|100.00|119.88|120.00|143.86|144.00|240.00",
+                                          "supportResolution":  "1920*1080",
+                                          "maxwidth":  4096,
+                                          "maxheight":  4096,
+                                          "minwidth":  800,
+                                          "minheight":  600,
+                                          "actualResolution":  {
+                                                                   "height":  1920,
+                                                                   "width":  1920
+                                                               },
+                                          "actualRefreshRate":  60,
+                                          "bitDepth":  0,
+                                          "colorSpace":  "RGB 4:4:4",
+                                          "dynamicRange":  "SDR",
+                                          "gamut":  "",
+                                          "range":  0,
+                                          "scanMode":  0,
+                                          "inPhase":  false,
+                                          "defaultEDID":  {
+                                                              "resolution":  {
+                                                                                 "width":  1920,
+                                                                                 "height":  1080
+                                                                             },
+                                                              "refreshRate":  60,
+                                                              "isCustom":  false
+                                                          },
+                                          "usable":  true,
+                                          "groupId":  58,
+                                          "order":  0,
+                                          "isSupportHDR":  false,
+                                          "isSupportMetaData":  false,
+                                          "isSupportEDID":  false,
+                                          "isSupportInputOverride":  true,
+                                          "isSupportColorAdjust":  true,
+                                          "sourceChannel":  5,
+                                          "metaData":  {
+                                                           "infoFrameType":  0,
+                                                           "infoFrameVersion":  0,
+                                                           "infoFramLength":  0,
+                                                           "checksum":  0,
+                                                           "sourceTye":  0,
+                                                           "maxLight":  0,
+                                                           "minMasterDisplayLight":  0,
+                                                           "maxMasterDisplayLight":  0,
+                                                           "maxContentLight":  0,
+                                                           "maxFrameAvgLight":  0,
+                                                           "whitePointX":  0,
+                                                           "whitePointY":  0
+                                                       },
+                                          "isSupportHDRParams":  true,
+                                          "isSupportPQMaxCllChecked":  true,
+                                          "hdrList":  null,
+                                          "isEdidCustom":  false,
+                                          "isSupportCapacities":  false,
+                                          "supportCapacities":  null,
+                                          "ip":  "",
+                                          "port":  0,
+                                          "fiberPortLinkStatus":  null,
+                                          "isSupportIPAndPort":  false,
+                                          "maxCapacity":  0,
+                                          "minCapacity":  0
+                                      },
+                                      {
+                                          "id":  256,
+                                          "cardId":  0,
+                                          "type":  4,
+                                          "name":  "DP1.1",
+                                          "step":  4,
+                                          "sourceStatus":  1,
+                                          "supportFrameRate":  "23.98|24.00|25.00|29.97|30.00|47.95|48.00|50.00|59.94|60.00|72.00|75.00|85.00|100.00|119.88|120.00|143.86|144.00|240.00",
+                                          "supportResolution":  "800*600|1024*768|1152*864|1280*720|1280*800|1440*900|1600*900|1600*1200|1680*1050|1920*1080|1920*1200|2048*1080|2048*1152|2304*1024|2304*1152|2560*1080|2560*1440|2560*1600|3840*1080",
+                                          "maxwidth":  4092,
+                                          "maxheight":  4095,
+                                          "minwidth":  800,
+                                          "minheight":  600,
+                                          "actualResolution":  {
+                                                                   "height":  1600,
+                                                                   "width":  1600
+                                                               },
+                                          "actualRefreshRate":  60,
+                                          "bitDepth":  0,
+                                          "colorSpace":  "RGB 4:4:4",
+                                          "dynamicRange":  "SDR",
+                                          "gamut":  "",
+                                          "range":  1,
+                                          "scanMode":  0,
+                                          "inPhase":  false,
+                                          "defaultEDID":  {
+                                                              "resolution":  {
+                                                                                 "width":  3840,
+                                                                                 "height":  1080
+                                                                             },
+                                                              "refreshRate":  60,
+                                                              "isCustom":  false
+                                                          },
+                                          "usable":  true,
+                                          "groupId":  32,
+                                          "order":  0,
+                                          "isSupportHDR":  false,
+                                          "isSupportMetaData":  false,
+                                          "isSupportEDID":  true,
+                                          "isSupportInputOverride":  true,
+                                          "isSupportColorAdjust":  true,
+                                          "sourceChannel":  1,
+                                          "metaData":  {
+                                                           "infoFrameType":  0,
+                                                           "infoFrameVersion":  0,
+                                                           "infoFramLength":  0,
+                                                           "checksum":  0,
+                                                           "sourceTye":  0,
+                                                           "maxLight":  0,
+                                                           "minMasterDisplayLight":  0,
+                                                           "maxMasterDisplayLight":  0,
+                                                           "maxContentLight":  0,
+                                                           "maxFrameAvgLight":  0,
+                                                           "whitePointX":  0,
+                                                           "whitePointY":  0
+                                                       },
+                                          "isSupportHDRParams":  true,
+                                          "isSupportPQMaxCllChecked":  true,
+                                          "hdrList":  null,
+                                          "isEdidCustom":  false,
+                                          "isSupportCapacities":  false,
+                                          "supportCapacities":  null,
+                                          "ip":  "",
+                                          "port":  0,
+                                          "fiberPortLinkStatus":  null,
+                                          "isSupportIPAndPort":  false,
+                                          "maxCapacity":  0,
+                                          "minCapacity":  0
+                                      },
+                                      {
+                                          "id":  768,
+                                          "cardId":  0,
+                                          "type":  2,
+                                          "name":  "HDMI1.4 2",
+                                          "step":  4,
+                                          "sourceStatus":  0,
+                                          "supportFrameRate":  "23.98|24.00|25.00|29.97|30.00|47.95|48.00|50.00|59.94|60.00|72.00|75.00|85.00|100.00|119.88|120.00|143.86|144.00|240.00",
+                                          "supportResolution":  "800*600|1024*768|1152*864|1280*720|1280*800|1440*900|1600*900|1600*1200|1680*1050|1920*1080|1920*1200|2048*1080|2048*1152|2304*1024|2304*1152|2560*1080|2560*1440|2560*1600|3840*1080",
+                                          "maxwidth":  4092,
+                                          "maxheight":  4095,
+                                          "minwidth":  800,
+                                          "minheight":  600,
+                                          "actualResolution":  {
+                                                                   "height":  3840,
+                                                                   "width":  3840
+                                                               },
+                                          "actualRefreshRate":  60,
+                                          "bitDepth":  0,
+                                          "colorSpace":  "RGB 4:4:4",
+                                          "dynamicRange":  "SDR",
+                                          "gamut":  "",
+                                          "range":  0,
+                                          "scanMode":  0,
+                                          "inPhase":  false,
+                                          "defaultEDID":  {
+                                                              "resolution":  {
+                                                                                 "width":  3840,
+                                                                                 "height":  1080
+                                                                             },
+                                                              "refreshRate":  60,
+                                                              "isCustom":  false
+                                                          },
+                                          "usable":  true,
+                                          "groupId":  18,
+                                          "order":  0,
+                                          "isSupportHDR":  false,
+                                          "isSupportMetaData":  false,
+                                          "isSupportEDID":  true,
+                                          "isSupportInputOverride":  true,
+                                          "isSupportColorAdjust":  true,
+                                          "sourceChannel":  3,
+                                          "metaData":  {
+                                                           "infoFrameType":  0,
+                                                           "infoFrameVersion":  0,
+                                                           "infoFramLength":  0,
+                                                           "checksum":  0,
+                                                           "sourceTye":  0,
+                                                           "maxLight":  0,
+                                                           "minMasterDisplayLight":  0,
+                                                           "maxMasterDisplayLight":  0,
+                                                           "maxContentLight":  0,
+                                                           "maxFrameAvgLight":  0,
+                                                           "whitePointX":  0,
+                                                           "whitePointY":  0
+                                                       },
+                                          "isSupportHDRParams":  true,
+                                          "isSupportPQMaxCllChecked":  true,
+                                          "hdrList":  [
+                                                          255,
+                                                          0,
+                                                          1,
+                                                          2
+                                                      ],
+                                          "isEdidCustom":  false,
+                                          "isSupportCapacities":  false,
+                                          "supportCapacities":  null,
+                                          "ip":  "",
+                                          "port":  0,
+                                          "fiberPortLinkStatus":  null,
+                                          "isSupportIPAndPort":  false,
+                                          "maxCapacity":  0,
+                                          "minCapacity":  0
+                                      },
+                                      {
+                                          "id":  512,
+                                          "cardId":  0,
+                                          "type":  3,
+                                          "name":  "HDMI2.0 1",
+                                          "step":  4,
+                                          "sourceStatus":  0,
+                                          "supportFrameRate":  "23.98|24.00|25.00|29.97|30.00|47.95|48.00|50.00|59.94|60.00|72.00|75.00|85.00|100.00|119.88|120.00|143.86|144.00|240.00",
+                                          "supportResolution":  "800*600|1024*768|1152*864|1280*720|1280*800|1440*900|1600*900|1600*1200|1680*1050|1920*1080|1920*1200|2048*1080|2048*1152|2304*1024|2304*1152|2560*1080|2560*1440|2560*1600|3840*1080|3840*2160",
+                                          "maxwidth":  4092,
+                                          "maxheight":  4095,
+                                          "minwidth":  800,
+                                          "minheight":  600,
+                                          "actualResolution":  {
+                                                                   "height":  3840,
+                                                                   "width":  3840
+                                                               },
+                                          "actualRefreshRate":  60,
+                                          "bitDepth":  0,
+                                          "colorSpace":  "RGB 4:4:4",
+                                          "dynamicRange":  "SDR",
+                                          "gamut":  "",
+                                          "range":  0,
+                                          "scanMode":  0,
+                                          "inPhase":  false,
+                                          "defaultEDID":  {
+                                                              "resolution":  {
+                                                                                 "width":  3840,
+                                                                                 "height":  2160
+                                                                             },
+                                                              "refreshRate":  60,
+                                                              "isCustom":  false
+                                                          },
+                                          "usable":  true,
+                                          "groupId":  25,
+                                          "order":  0,
+                                          "isSupportHDR":  true,
+                                          "isSupportMetaData":  true,
+                                          "isSupportEDID":  true,
+                                          "isSupportInputOverride":  true,
+                                          "isSupportColorAdjust":  true,
+                                          "sourceChannel":  2,
+                                          "metaData":  {
+                                                           "infoFrameType":  0,
+                                                           "infoFrameVersion":  0,
+                                                           "infoFramLength":  0,
+                                                           "checksum":  0,
+                                                           "sourceTye":  0,
+                                                           "maxLight":  0,
+                                                           "minMasterDisplayLight":  0,
+                                                           "maxMasterDisplayLight":  0,
+                                                           "maxContentLight":  0,
+                                                           "maxFrameAvgLight":  0,
+                                                           "whitePointX":  0,
+                                                           "whitePointY":  0
+                                                       },
+                                          "isSupportHDRParams":  true,
+                                          "isSupportPQMaxCllChecked":  true,
+                                          "hdrList":  [
+                                                          255,
+                                                          0,
+                                                          1,
+                                                          2
+                                                      ],
+                                          "isEdidCustom":  false,
+                                          "isSupportCapacities":  false,
+                                          "supportCapacities":  null,
+                                          "ip":  "",
+                                          "port":  0,
+                                          "fiberPortLinkStatus":  null,
+                                          "isSupportIPAndPort":  false,
+                                          "maxCapacity":  0,
+                                          "minCapacity":  0
+                                      },
+                                      {
+                                          "id":  25856,
+                                          "cardId":  101,
+                                          "type":  224,
+                                          "name":  "internal-source",
+                                          "step":  4,
+                                          "sourceStatus":  1,
+                                          "supportFrameRate":  "23.98|24.00|25.00|29.97|30.00|47.95|48.00|50.00|59.94|60.00|71.93|72.00|75.00|100.00|119.88|120.00|143.86|144.00|240.00",
+                                          "supportResolution":  "800*600|1024*768|1152*864|1280*720|1280*800|1440*900|1600*900|1600*1200|1680*1050|1920*1080|1920*1200|2048*1080|2048*1152|2304*1024|2304*1152|2560*1080|2560*1440|2560*1600|2880*1800|3840*1080",
+                                          "maxwidth":  8192,
+                                          "maxheight":  8192,
+                                          "minwidth":  800,
+                                          "minheight":  600,
+                                          "actualResolution":  {
+                                                                   "height":  1600,
+                                                                   "width":  1600
+                                                               },
+                                          "actualRefreshRate":  60,
+                                          "bitDepth":  1,
+                                          "colorSpace":  "YCbCr 4:4:4",
+                                          "dynamicRange":  "SDR",
+                                          "gamut":  "DCI-P3(D65)",
+                                          "range":  1,
+                                          "scanMode":  0,
+                                          "inPhase":  false,
+                                          "defaultEDID":  {
+                                                              "resolution":  {
+                                                                                 "width":  3840,
+                                                                                 "height":  1080
+                                                                             },
+                                                              "refreshRate":  60,
+                                                              "isCustom":  false
+                                                          },
+                                          "usable":  true,
+                                          "groupId":  224,
+                                          "order":  0,
+                                          "isSupportHDR":  false,
+                                          "isSupportMetaData":  false,
+                                          "isSupportEDID":  true,
+                                          "isSupportInputOverride":  true,
+                                          "isSupportColorAdjust":  true,
+                                          "sourceChannel":  6,
+                                          "metaData":  {
+                                                           "infoFrameType":  0,
+                                                           "infoFrameVersion":  0,
+                                                           "infoFramLength":  0,
+                                                           "checksum":  0,
+                                                           "sourceTye":  0,
+                                                           "maxLight":  0,
+                                                           "minMasterDisplayLight":  0,
+                                                           "maxMasterDisplayLight":  0,
+                                                           "maxContentLight":  0,
+                                                           "maxFrameAvgLight":  0,
+                                                           "whitePointX":  0,
+                                                           "whitePointY":  0
+                                                       },
+                                          "isSupportHDRParams":  true,
+                                          "isSupportPQMaxCllChecked":  true,
+                                          "hdrList":  null,
+                                          "isEdidCustom":  false,
+                                          "isSupportCapacities":  false,
+                                          "supportCapacities":  null,
+                                          "ip":  "",
+                                          "port":  0,
+                                          "fiberPortLinkStatus":  null,
+                                          "isSupportIPAndPort":  false,
+                                          "maxCapacity":  0,
+                                          "minCapacity":  0
+                                      }
+                                  ],
+                         "message":  "Success"
+                     }
+    },
+    {
+        "timestamp":  "2025-08-21 14:12:52",
+        "method":  "PUT",
+        "name":  "switchLayerSource",
+        "description":  "Switch Layer Input Source",
+        "status":  "200",
+        "duration":  "43ms",
+        "endpoint":  "/screen/layer/input",
+        "response":  {
+                         "code":  3,
+                         "data":  null,
+                         "message":  "json: cannot unmarshal string into Go struct field Layer.layers.id of type uint64"
+                     }
+    },
+    {
+        "timestamp":  "2025-08-21 14:12:55",
+        "method":  "GET",
+        "name":  "getScreenOutputData",
+        "description":  "Retrieve Screen Output Data",
+        "status":  "200",
+        "duration":  "10ms",
+        "endpoint":  "/screen/output?screenId={7e9cd858-780b-40d1-9f20-0fa0d53a06ce}",
+        "response":  {
+                         "code":  0,
+                         "data":  [
+                                      {
+                                          "screenId":  "{7e9cd858-780b-40d1-9f20-0fa0d53a06ce}",
+                                          "lowDelay":  false,
+                                          "additionalFrameDelay":  0,
+                                          "outputBitDepth":  {
+                                                                 "bitDepth":  255,
+                                                                 "currentBitDepth":  0
+                                                             },
+                                          "threeD":  {
+                                                         "enable":  false,
+                                                         "sourceMode":  0,
+                                                         "eyePriority":  0,
+                                                         "rightEyeOffset":  {
+                                                                                "x":  960,
+                                                                                "y":  540
+                                                                            },
+                                                         "threeDFrame":  0,
+                                                         "threeDFrameList":  null,
+                                                         "threeDEmitterInfo":  {
+                                                                                   "enable":  false,
+                                                                                   "ms":  0,
+                                                                                   "us":  7000
+                                                                               }
+                                                     },
+                                          "currentFrameRate":  60,
+                                          "curtainMaxFrameRate":  0,
+                                          "phaseList":  [
+                                                            23.98,
+                                                            24,
+                                                            25,
+                                                            29.97,
+                                                            30,
+                                                            47.95,
+                                                            48,
+                                                            50,
+                                                            59.94,
+                                                            60,
+                                                            71.93,
+                                                            72,
+                                                            75,
+                                                            100,
+                                                            119.88,
+                                                            120,
+                                                            143.86,
+                                                            144,
+                                                            240
+                                                        ],
+                                          "curPhase":  {
+                                                           "type":  0,
+                                                           "value":  0,
+                                                           "absoluteValue":  {
+                                                                                 "phaseline":  0,
+                                                                                 "phasepixel":  0,
+                                                                                 "isValid":  true
+                                                                             }
+                                                       },
+                                          "genlock":  {
+                                                          "masterLayerGroupId":  32,
+                                                          "selectedType":  102,
+                                                          "syncframeratelist":  [
+                                                                                    {
+                                                                                        "selectedType":  100,
+                                                                                        "frameratevalue":  60
+                                                                                    },
+                                                                                    {
+                                                                                        "selectedType":  101,
+                                                                                        "frameratevalue":  -1
+                                                                                    },
+                                                                                    {
+                                                                                        "selectedType":  102,
+                                                                                        "frameratevalue":  60
+                                                                                    }
+                                                                                ],
+                                                          "selectSource":  224
+                                                      },
+                                          "frameRemapingData":  {
+                                                                    "screenId":  "{7e9cd858-780b-40d1-9f20-0fa0d53a06ce}",
+                                                                    "frameType":  2,
+                                                                    "frameSwitch":  false,
+                                                                    "frameRemaping":  [
+                                                                                          {
+                                                                                              "index":  1,
+                                                                                              "offsetX":  0,
+                                                                                              "offsetY":  0,
+                                                                                              "rData":  255,
+                                                                                              "gData":  255,
+                                                                                              "bData":  255,
+                                                                                              "customColourEn":  false
+                                                                                          },
+                                                                                          {
+                                                                                              "index":  2,
+                                                                                              "offsetX":  0,
+                                                                                              "offsetY":  0,
+                                                                                              "rData":  255,
+                                                                                              "gData":  255,
+                                                                                              "bData":  255,
+                                                                                              "customColourEn":  false
+                                                                                          },
+                                                                                          {
+                                                                                              "index":  3,
+                                                                                              "offsetX":  0,
+                                                                                              "offsetY":  0,
+                                                                                              "rData":  255,
+                                                                                              "gData":  255,
+                                                                                              "bData":  255,
+                                                                                              "customColourEn":  false
+                                                                                          },
+                                                                                          {
+                                                                                              "index":  4,
+                                                                                              "offsetX":  0,
+                                                                                              "offsetY":  0,
+                                                                                              "rData":  255,
+                                                                                              "gData":  255,
+                                                                                              "bData":  255,
+                                                                                              "customColourEn":  false
+                                                                                          },
+                                                                                          {
+                                                                                              "index":  5,
+                                                                                              "offsetX":  0,
+                                                                                              "offsetY":  0,
+                                                                                              "rData":  255,
+                                                                                              "gData":  255,
+                                                                                              "bData":  255,
+                                                                                              "customColourEn":  false
+                                                                                          },
+                                                                                          {
+                                                                                              "index":  6,
+                                                                                              "offsetX":  0,
+                                                                                              "offsetY":  0,
+                                                                                              "rData":  255,
+                                                                                              "gData":  255,
+                                                                                              "bData":  255,
+                                                                                              "customColourEn":  false
+                                                                                          }
+                                                                                      ]
+                                                                },
+                                          "hDREOTFParams":  {
+                                                                "overridePeakLum":  false,
+                                                                "peakLuminance":  1000,
+                                                                "highLightRatio":  0,
+                                                                "darkRatio":  2,
+                                                                "sceRatio":  0
+                                                            },
+                                          "gamutList":  {
+                                                            "currentGamutName":  "",
+                                                            "colorGamutInfoList":  [
+                                                                                       {
+                                                                                           "colorGamutInfo":  {
+                                                                                                                  "targetGamut":  {
+                                                                                                                                      "name":  "DCI-P3(D65)",
+                                                                                                                                      "gamut":  {
+                                                                                                                                                    "rLxy":  "@{name=DCI-P3(D65); lum=900; cx=0.68; cy=0.32}",
+                                                                                                                                                    "gLxy":  "@{name=DCI-P3(D65); lum=1900; cx=0.265; cy=0.69}",
+                                                                                                                                                    "bLxy":  "@{name=DCI-P3(D65); lum=320; cx=0.15; cy=0.06}",
+                                                                                                                                                    "wLxy":  "@{name=D65; lum=3120; cx=0.3127; cy=0.329}"
+                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                                  "colorTemperature":  6504
+                                                                                                              },
+                                                                                           "fromInputStatus":  false,
+                                                                                           "isCustomGamut":  false
+                                                                                       },
+                                                                                       {
+                                                                                           "colorGamutInfo":  {
+                                                                                                                  "targetGamut":  {
+                                                                                                                                      "name":  "PAL",
+                                                                                                                                      "gamut":  {
+                                                                                                                                                    "rLxy":  "@{name=PAL; lum=900; cx=0.625; cy=0.34}",
+                                                                                                                                                    "gLxy":  "@{name=PAL; lum=1900; cx=0.28; cy=0.595}",
+                                                                                                                                                    "bLxy":  "@{name=PAL; lum=320; cx=0.155; cy=0.07}",
+                                                                                                                                                    "wLxy":  "@{name=D65; lum=3120; cx=0.3127; cy=0.329}"
+                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                                  "colorTemperature":  6500
+                                                                                                              },
+                                                                                           "fromInputStatus":  false,
+                                                                                           "isCustomGamut":  false
+                                                                                       },
+                                                                                       {
+                                                                                           "colorGamutInfo":  {
+                                                                                                                  "targetGamut":  {
+                                                                                                                                      "name":  "Rec.601-625",
+                                                                                                                                      "gamut":  {
+                                                                                                                                                    "rLxy":  "@{name=Rec.601-625; lum=900; cx=0.64; cy=0.33}",
+                                                                                                                                                    "gLxy":  "@{name=Rec.601-625; lum=1900; cx=0.29; cy=0.6}",
+                                                                                                                                                    "bLxy":  "@{name=Rec.601-625; lum=320; cx=0.15; cy=0.06}",
+                                                                                                                                                    "wLxy":  "@{name=D65; lum=3120; cx=0.3127; cy=0.329}"
+                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                                  "colorTemperature":  6500
+                                                                                                              },
+                                                                                           "fromInputStatus":  false,
+                                                                                           "isCustomGamut":  false
+                                                                                       },
+                                                                                       {
+                                                                                           "colorGamutInfo":  {
+                                                                                                                  "targetGamut":  {
+                                                                                                                                      "name":  "AdobeRGB",
+                                                                                                                                      "gamut":  {
+                                                                                                                                                    "rLxy":  "@{name=AdobeRGB; lum=900; cx=0.64; cy=0.33}",
+                                                                                                                                                    "gLxy":  "@{name=AdobeRGB; lum=1900; cx=0.21; cy=0.71}",
+                                                                                                                                                    "bLxy":  "@{name=AdobeRGB; lum=320; cx=0.15; cy=0.06}",
+                                                                                                                                                    "wLxy":  "@{name=D65; lum=3120; cx=0.3127; cy=0.329}"
+                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                                  "colorTemperature":  6500
+                                                                                                              },
+                                                                                           "fromInputStatus":  false,
+                                                                                           "isCustomGamut":  false
+                                                                                       },
+                                                                                       {
+                                                                                           "colorGamutInfo":  {
+                                                                                                                  "targetGamut":  {
+                                                                                                                                      "name":  "sRGB",
+                                                                                                                                      "gamut":  {
+                                                                                                                                                    "rLxy":  "@{name=sRGB; lum=900; cx=0.64; cy=0.33}",
+                                                                                                                                                    "gLxy":  "@{name=sRGB; lum=1900; cx=0.3; cy=0.6}",
+                                                                                                                                                    "bLxy":  "@{name=sRGB; lum=320; cx=0.15; cy=0.06}",
+                                                                                                                                                    "wLxy":  "@{name=D65; lum=3120; cx=0.3127; cy=0.329}"
+                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                                  "colorTemperature":  6500
+                                                                                                              },
+                                                                                           "fromInputStatus":  false,
+                                                                                           "isCustomGamut":  false
+                                                                                       },
+                                                                                       {
+                                                                                           "colorGamutInfo":  {
+                                                                                                                  "targetGamut":  {
+                                                                                                                                      "name":  "Rec.601-525",
+                                                                                                                                      "gamut":  {
+                                                                                                                                                    "rLxy":  "@{name=Rec.601-525; lum=900; cx=0.63; cy=0.34}",
+                                                                                                                                                    "gLxy":  "@{name=Rec.601-525; lum=1900; cx=0.31; cy=0.595}",
+                                                                                                                                                    "bLxy":  "@{name=Rec.601-525; lum=320; cx=0.155; cy=0.07}",
+                                                                                                                                                    "wLxy":  "@{name=D65; lum=3120; cx=0.3127; cy=0.329}"
+                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                                  "colorTemperature":  6500
+                                                                                                              },
+                                                                                           "fromInputStatus":  false,
+                                                                                           "isCustomGamut":  false
+                                                                                       },
+                                                                                       {
+                                                                                           "colorGamutInfo":  {
+                                                                                                                  "targetGamut":  {
+                                                                                                                                      "name":  "Rec.709",
+                                                                                                                                      "gamut":  {
+                                                                                                                                                    "rLxy":  "@{name=Rec.709; lum=692.57184699356; cx=0.64; cy=0.33}",
+                                                                                                                                                    "gLxy":  "@{name=Rec.709; lum=2194.314185390092; cx=0.3; cy=0.6}",
+                                                                                                                                                    "bLxy":  "@{name=Rec.709; lum=233.1139676163; cx=0.15; cy=0.06}",
+                                                                                                                                                    "wLxy":  "@{name=D65; lum=3120; cx=0.3127; cy=0.329}"
+                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                                  "colorTemperature":  6504
+                                                                                                              },
+                                                                                           "fromInputStatus":  false,
+                                                                                           "isCustomGamut":  false
+                                                                                       },
+                                                                                       {
+                                                                                           "colorGamutInfo":  {
+                                                                                                                  "targetGamut":  {
+                                                                                                                                      "name":  "Rec.2020",
+                                                                                                                                      "gamut":  {
+                                                                                                                                                    "rLxy":  "@{name=Rec.2020; lum=900; cx=0.708; cy=0.292}",
+                                                                                                                                                    "gLxy":  "@{name=Rec.2020; lum=1900; cx=0.17; cy=0.797}",
+                                                                                                                                                    "bLxy":  "@{name=Rec.2020; lum=320; cx=0.131; cy=0.046}",
+                                                                                                                                                    "wLxy":  "@{name=D65; lum=3120; cx=0.3127; cy=0.329}"
+                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                                  "colorTemperature":  6504
+                                                                                                              },
+                                                                                           "fromInputStatus":  false,
+                                                                                           "isCustomGamut":  false
+                                                                                       },
+                                                                                       {
+                                                                                           "colorGamutInfo":  {
+                                                                                                                  "targetGamut":  {
+                                                                                                                                      "name":  "DCI-P3(D63)",
+                                                                                                                                      "gamut":  {
+                                                                                                                                                    "rLxy":  "@{name=DCI-P3(D63); lum=900; cx=0.68; cy=0.32}",
+                                                                                                                                                    "gLxy":  "@{name=DCI-P3(D63); lum=1900; cx=0.265; cy=0.69}",
+                                                                                                                                                    "bLxy":  "@{name=DCI-P3(D63); lum=320; cx=0.15; cy=0.06}",
+                                                                                                                                                    "wLxy":  "@{name=D63; lum=3120; cx=0.314; cy=0.351}"
+                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                                  "colorTemperature":  6304
+                                                                                                              },
+                                                                                           "fromInputStatus":  false,
+                                                                                           "isCustomGamut":  false
+                                                                                       },
+                                                                                       {
+                                                                                           "colorGamutInfo":  {
+                                                                                                                  "targetGamut":  {
+                                                                                                                                      "name":  "NTSC",
+                                                                                                                                      "gamut":  {
+                                                                                                                                                    "rLxy":  "@{name=NTSC; lum=900; cx=0.67; cy=0.33}",
+                                                                                                                                                    "gLxy":  "@{name=NTSC; lum=1900; cx=0.21; cy=0.71}",
+                                                                                                                                                    "bLxy":  "@{name=NTSC; lum=320; cx=0.14; cy=0.08}",
+                                                                                                                                                    "wLxy":  "@{name=D65; lum=3120; cx=0.31; cy=0.316}"
+                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                                  "colorTemperature":  6776
+                                                                                                              },
+                                                                                           "fromInputStatus":  false,
+                                                                                           "isCustomGamut":  false
+                                                                                       },
+                                                                                       {
+                                                                                           "colorGamutInfo":  {
+                                                                                                                  "targetGamut":  {
+                                                                                                                                      "name":  "Custom",
+                                                                                                                                      "gamut":  {
+                                                                                                                                                    "rLxy":  "@{name=; lum=900; cx=0.68; cy=0.32}",
+                                                                                                                                                    "gLxy":  "@{name=; lum=1900; cx=0.265; cy=0.69}",
+                                                                                                                                                    "bLxy":  "@{name=; lum=320; cx=0.15; cy=0.06}",
+                                                                                                                                                    "wLxy":  "@{name=; lum=3120; cx=0.3127; cy=0.329}"
+                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                                  "colorTemperature":  6504
+                                                                                                              },
+                                                                                           "fromInputStatus":  false,
+                                                                                           "isCustomGamut":  true
+                                                                                       },
+                                                                                       {
+                                                                                           "colorGamutInfo":  {
+                                                                                                                  "targetGamut":  {
+                                                                                                                                      "name":  "",
+                                                                                                                                      "gamut":  {
+                                                                                                                                                    "rLxy":  "@{name=; lum=65537.5755; cx=2.5755; cy=2.5755}",
+                                                                                                                                                    "gLxy":  "@{name=; lum=65537.5755; cx=2.5755; cy=2.5755}",
+                                                                                                                                                    "bLxy":  "@{name=; lum=65537.5755; cx=2.5755; cy=2.5755}",
+                                                                                                                                                    "wLxy":  "@{name=; lum=65537.5755; cx=2.5755; cy=2.5755}"
+                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                                  "colorTemperature":  20640
+                                                                                                              },
+                                                                                           "fromInputStatus":  false,
+                                                                                           "isCustomGamut":  false
+                                                                                       },
+                                                                                       {
+                                                                                           "colorGamutInfo":  {
+                                                                                                                  "targetGamut":  {
+                                                                                                                                      "name":  "From input",
+                                                                                                                                      "gamut":  {
+                                                                                                                                                    "rLxy":  "@{name=From input; lum=900; cx=0.68; cy=0.32}",
+                                                                                                                                                    "gLxy":  "@{name=From input; lum=1900; cx=0.265; cy=0.69}",
+                                                                                                                                                    "bLxy":  "@{name=From input; lum=320; cx=0.15; cy=0.06}",
+                                                                                                                                                    "wLxy":  "@{name=From input; lum=3120; cx=0.3127; cy=0.329}"
+                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                                  "colorTemperature":  6504
+                                                                                                              },
+                                                                                           "fromInputStatus":  true,
+                                                                                           "isCustomGamut":  false
+                                                                                       }
+                                                                                   ]
+                                                        },
+                                          "subpixelParam":  {
+                                                                "mode":  0,
+                                                                "csc":  {
+                                                                            "contrast":  100,
+                                                                            "Saturation":  100,
+                                                                            "hue":  0
+                                                                        },
+                                                                "sharpness":  100
+                                                            }
+                                      }
+                                  ],
+                         "message":  "Success"
+                     }
+    }
+]

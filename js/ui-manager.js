@@ -114,13 +114,25 @@ class UIManager {
         if (screens && screens.length > 0) {
             screens.forEach(screen => {
                 const option = document.createElement('option');
-                option.value = screen.id;
-                option.textContent = screen.name || `Screen ${screen.id}`;
+                // Handle different possible ID fields
+                const screenId = screen.id || screen.screenId || novastarAPI.currentScreenId;
+                option.value = screenId;
+                option.textContent = screen.name || `Screen ${screenId}`;
                 select.appendChild(option);
             });
             
-            // Auto-select first screen
-            this.handleScreenChange(screens[0].id);
+            // Auto-select first screen or use the detected screen ID
+            const firstScreenId = screens[0].id || screens[0].screenId || novastarAPI.currentScreenId;
+            if (firstScreenId) {
+                this.handleScreenChange(firstScreenId);
+            }
+        } else if (novastarAPI.currentScreenId) {
+            // If no screens array but we have a screen ID from connection
+            const option = document.createElement('option');
+            option.value = novastarAPI.currentScreenId;
+            option.textContent = `Screen ${novastarAPI.currentScreenId}`;
+            select.appendChild(option);
+            this.handleScreenChange(novastarAPI.currentScreenId);
         } else {
             const option = document.createElement('option');
             option.value = '';
@@ -133,9 +145,15 @@ class UIManager {
      * Handle screen selection change
      */
     async handleScreenChange(screenId) {
+        if (!screenId) {
+            // Use the screen ID from API if available
+            screenId = novastarAPI.currentScreenId;
+        }
+        
         if (!screenId) return;
         
         this.currentScreen = screenId;
+        novastarAPI.currentScreenId = screenId; // Ensure API has the current screen ID
         this.showLoading('Loading screen data...');
         
         // Load all screen data

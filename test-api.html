@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MX Control - API Test Suite</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            color: #fff;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+        }
+        
+        .test-section {
+            background: rgba(31, 41, 55, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #2d3748;
+        }
+        
+        .test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .test-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #4facfe;
+        }
+        
+        .test-button {
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .test-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .test-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .test-result {
+            background: #0a0e1a;
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+        }
+        
+        .test-result.show {
+            display: block;
+        }
+        
+        .success {
+            color: #10b981;
+        }
+        
+        .error {
+            color: #ef4444;
+        }
+        
+        .warning {
+            color: #f59e0b;
+        }
+        
+        .info {
+            color: #3b82f6;
+        }
+        
+        .connection-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .connection-form input {
+            padding: 10px;
+            background: #0a0e1a;
+            border: 1px solid #2d3748;
+            border-radius: 6px;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .connection-form input:focus {
+            outline: none;
+            border-color: #4facfe;
+        }
+        
+        #connectionStatus {
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        #connectionStatus.success {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #10b981;
+            display: block;
+        }
+        
+        #connectionStatus.error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+            display: block;
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MX Control - API Test Suite</h1>
+        
+        <div class="connection-form">
+            <input type="text" id="ipAddress" placeholder="IP Address" value="10.0.0.22">
+            <input type="text" id="port" placeholder="Port" value="8001">
+            <button class="test-button" onclick="testConnection()">Test Connection</button>
+            <button class="test-button" onclick="runAllTests()">Run All Tests</button>
+        </div>
+        
+        <div id="connectionStatus"></div>
+        
+        <div class="test-grid">
+            <!-- Basic Connection Tests -->
+            <div class="test-section">
+                <div class="test-header">
+                    <span class="test-title">1. Test Basic Connection</span>
+                    <button class="test-button" onclick="testBasicConnection()">Run Test</button>
+                </div>
+                <div class="test-result" id="result-basic"></div>
+            </div>
+            
+            <!-- Get Screens Test -->
+            <div class="test-section">
+                <div class="test-header">
+                    <span class="test-title">2. Get Screen Information</span>
+                    <button class="test-button" onclick="testGetScreens()">Run Test</button>
+                </div>
+                <div class="test-result" id="result-screens"></div>
+            </div>
+            
+            <!-- Get Input Sources -->
+            <div class="test-section">
+                <div class="test-header">
+                    <span class="test-title">3. Get Input Sources</span>
+                    <button class="test-button" onclick="testGetInputs()">Run Test</button>
+                </div>
+                <div class="test-result" id="result-inputs"></div>
+            </div>
+            
+            <!-- Get Layers -->
+            <div class="test-section">
+                <div class="test-header">
+                    <span class="test-title">4. Get Active Layers</span>
+                    <button class="test-button" onclick="testGetLayers()">Run Test</button>
+                </div>
+                <div class="test-result" id="result-layers"></div>
+            </div>
+            
+            <!-- Get Presets -->
+            <div class="test-section">
+                <div class="test-header">
+                    <span class="test-title">5. Get Presets</span>
+                    <button class="test-button" onclick="testGetPresets()">Run Test</button>
+                </div>
+                <div class="test-result" id="result-presets"></div>
+            </div>
+            
+            <!-- Get Cabinet Info -->
+            <div class="test-section">
+                <div class="test-header">
+                    <span class="test-title">6. Get Cabinet Information</span>
+                    <button class="test-button" onclick="testGetCabinets()">Run Test</button>
+                </div>
+                <div class="test-result" id="result-cabinets"></div>
+            </div>
+            
+            <!-- Test Brightness Control -->
+            <div class="test-section">
+                <div class="test-header">
+                    <span class="test-title">7. Test Brightness (Set to 50%)</span>
+                    <button class="test-button" onclick="testSetBrightness()">Run Test</button>
+                </div>
+                <div class="test-result" id="result-brightness"></div>
+            </div>
+            
+            <!-- Test Display Mode -->
+            <div class="test-section">
+                <div class="test-header">
+                    <span class="test-title">8. Test Display Mode</span>
+                    <button class="test-button" onclick="testDisplayMode()">Run Test</button>
+                </div>
+                <div class="test-result" id="result-display"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let api = null;
+        let currentScreenId = null;
+        
+        function getBaseUrl() {
+            const ip = document.getElementById('ipAddress').value;
+            const port = document.getElementById('port').value;
+            return `http://${ip}:${port}/api/v1`;
+        }
+        
+        function showResult(elementId, message, type = 'info') {
+            const element = document.getElementById(elementId);
+            element.innerHTML = `<span class="${type}">${message}</span>`;
+            element.classList.add('show');
+        }
+        
+        // Initialize axios instance
+        function initAxios() {
+            api = axios.create({
+                baseURL: getBaseUrl(),
+                timeout: 10000,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            // Add logging
+            api.interceptors.response.use(
+                response => {
+                    console.log('Success:', response.config.url, response.data);
+                    return response;
+                },
+                error => {
+                    console.error('Error:', error.config?.url, error.message, error.response?.data);
+                    return Promise.reject(error);
+                }
+            );
+        }
+        
+        async function testConnection() {
+            const status = document.getElementById('connectionStatus');
+            try {
+                status.textContent = 'Testing connection...';
+                status.className = '';
+                
+                initAxios();
+                
+                const response = await api.get('/screen');
+                
+                if (response.data.code === 0) {
+                    status.textContent = `✓ Connected successfully!`;
+                    status.className = 'success';
+                    
+                    // Extract and store screen ID
+                    if (response.data.data?.screens?.[0]?.screenID) {
+                        currentScreenId = response.data.data.screens[0].screenID;
+                        console.log('Screen ID detected:', currentScreenId);
+                    }
+                } else {
+                    throw new Error(response.data.message || 'Connection failed');
+                }
+            } catch (error) {
+                status.textContent = `✗ Connection failed: ${error.message}`;
+                status.className = 'error';
+            }
+        }
+        
+        async function testBasicConnection() {
+            try {
+                if (!api) initAxios();
+                showResult('result-basic', 'Testing connection...', 'info');
+                
+                const response = await api.get('/screen');
+                
+                if (response.data.code === 0 && response.data.data?.screens?.[0]) {
+                    const screen = response.data.data.screens[0];
+                    currentScreenId = screen.screenID;
+                    
+                    showResult('result-basic', `✓ Connection successful!\nScreen ID: ${currentScreenId}\nScreen Name: ${screen.screenName}\n${JSON.stringify(response.data, null, 2)}`, 'success');
+                    
+                    window.SCREEN_ID = currentScreenId;
+                    console.log('Screen ID detected:', currentScreenId);
+                } else {
+                    showResult('result-basic', `Response received but no valid screen data: ${JSON.stringify(response.data)}`, 'warning');
+                }
+            } catch (error) {
+                showResult('result-basic', `✗ Connection failed: ${error.message}`, 'error');
+            }
+        }
+        
+        async function testGetScreens() {
+            try {
+                if (!api) initAxios();
+                showResult('result-screens', 'Fetching screen information...', 'info');
+                
+                const response = await api.get('/screen');
+                
+                if (response.data.code === 0 && response.data.data?.screens) {
+                    const screens = response.data.data.screens;
+                    showResult('result-screens', `✓ ${screens.length} screen(s) found:\n${JSON.stringify(screens, null, 2)}`, 'success');
+                } else {
+                    showResult('result-screens', `Failed: ${response.data.message || 'No screens found'}`, 'error');
+                }
+            } catch (error) {
+                showResult('result-screens', `✗ Failed to get screens: ${error.message}`, 'error');
+            }
+        }
+        
+        async function testGetInputs() {
+            try {
+                if (!api) initAxios();
+                showResult('result-inputs', 'Fetching input sources from screen data...', 'info');
+                
+                const response = await api.get('/screen');
+                
+                if (response.data.code === 0 && response.data.data?.screens?.[0]) {
+                    const screen = response.data.data.screens[0];
+                    const inputPort = screen.inputPort;
+                    
+                    if (inputPort) {
+                        const inputInfo = {
+                            logicId: inputPort.LogicId,
+                            type: inputPort.InputDetailInfo?.Type,
+                            resolution: `${inputPort.InputSrcInfo?.SourceDetInColPixel}x${inputPort.InputSrcInfo?.SourceDetInRowPixel}`,
+                            status: inputPort.InputSrcInfo?.SourceStatus === 1 ? 'Active' : 'Inactive',
+                            frameRate: inputPort.InputSrcInfo?.SourceFieldRate
+                        };
+                        showResult('result-inputs', `✓ Input source found:\n${JSON.stringify(inputInfo, null, 2)}`, 'success');
+                    } else {
+                        showResult('result-inputs', 'No input sources found in screen data', 'warning');
+                    }
+                } else {
+                    showResult('result-inputs', `Failed: ${response.data.message || 'No screen data'}`, 'error');
+                }
+            } catch (error) {
+                showResult('result-inputs', `✗ Failed to get inputs: ${error.message}`, 'error');
+            }
+        }
+        
+        async function testGetLayers() {
+            try {
+                if (!api) initAxios();
+                showResult('result-layers', 'Fetching layers from screen data...', 'info');
+                
+                const response = await api.get('/screen');
+                
+                if (response.data.code === 0 && response.data.data?.screens?.[0]) {
+                    const screen = response.data.data.screens[0];
+                    const workingMode = screen.layersInWorkingMode?.find(m => m.workingMode === screen.workingMode) || screen.layersInWorkingMode?.[0];
+                    
+                    if (workingMode && workingMode.layers) {
+                        const layers = workingMode.layers.map(layer => ({
+                            id: layer.id,
+                            layerIndex: layer.layerIndex,
+                            position: layer.position,
+                            size: layer.scaler || layer.sourceSize,
+                            zOrder: layer.zOrder,
+                            source: layer.source
+                        }));
+                        showResult('result-layers', `✓ ${layers.length} layer(s) found:\n${JSON.stringify(layers, null, 2)}`, 'success');
+                    } else {
+                        showResult('result-layers', 'No layers found in current working mode', 'warning');
+                    }
+                } else {
+                    showResult('result-layers', `Failed: ${response.data.message || 'No screen data'}`, 'error');
+                }
+            } catch (error) {
+                showResult('result-layers', `✗ Failed to get layers: ${error.message}`, 'error');
+            }
+        }
+        
+        async function testGetPresets() {
+            try {
+                if (!api) initAxios();
+                showResult('result-presets', 'Fetching presets...', 'info');
+                
+                // Try to get presets - this endpoint might not exist in COEX
+                try {
+                    const response = await api.get('/screen/presets');
+                    if (response.data.code === 0) {
+                        showResult('result-presets', `✓ Presets:\n${JSON.stringify(response.data.data, null, 2)}`, 'success');
+                    } else {
+                        showResult('result-presets', `No presets available: ${response.data.message}`, 'warning');
+                    }
+                } catch (err) {
+                    // Presets might be handled differently or not available
+                    showResult('result-presets', 'Preset endpoint not available in this COEX version', 'warning');
+                }
+            } catch (error) {
+                showResult('result-presets', `✗ Failed to get presets: ${error.message}`, 'error');
+            }
+        }
+        
+        async function testGetCabinets() {
+            try {
+                if (!api) initAxios();
+                showResult('result-cabinets', 'Fetching cabinet information from screen data...', 'info');
+                
+                const response = await api.get('/screen');
+                
+                if (response.data.code === 0 && response.data.data?.screens?.[0]) {
+                    const screen = response.data.data.screens[0];
+                    const cabinets = [];
+                    
+                    if (screen.canvases) {
+                        screen.canvases.forEach(canvas => {
+                            if (canvas.cabinets) {
+                                cabinets.push(...canvas.cabinets.map(cab => ({
+                                    id: cab.cabinetID,
+                                    position: cab.position,
+                                    size: cab.size,
+                                    locked: cab.lockStatus
+                                })));
+                            }
+                        });
+                    }
+                    
+                    if (cabinets.length > 0) {
+                        showResult('result-cabinets', `✓ ${cabinets.length} cabinet(s) found:\n${JSON.stringify(cabinets, null, 2)}`, 'success');
+                    } else {
+                        showResult('result-cabinets', 'No cabinets found in screen data', 'warning');
+                    }
+                } else {
+                    showResult('result-cabinets', `Failed: ${response.data.message || 'No screen data'}`, 'error');
+                }
+            } catch (error) {
+                showResult('result-cabinets', `✗ Failed to get cabinets: ${error.message}`, 'error');
+            }
+        }
+        
+        async function testSetBrightness() {
+            try {
+                if (!currentScreenId) {
+                    showResult('result-brightness', '⚠ No screen ID available. Run "Test Basic Connection" first!', 'warning');
+                    return;
+                }
+                if (!api) initAxios();
+                
+                showResult('result-brightness', `Setting brightness to 50% for screen ${currentScreenId}...`, 'info');
+                
+                // COEX API expects screenIdList with the actual screen ID
+                const response = await api.put('/screen/brightness', {
+                    screenIdList: [currentScreenId],
+                    brightness: 50
+                });
+                
+                if (response.data.code === 0) {
+                    showResult('result-brightness', `✓ Brightness set to 50%\n${JSON.stringify(response.data, null, 2)}`, 'success');
+                } else {
+                    showResult('result-brightness', `Failed: ${response.data.message}`, 'error');
+                }
+            } catch (error) {
+                showResult('result-brightness', `✗ Failed to set brightness: ${error.message}`, 'error');
+            }
+        }
+        
+        async function testDisplayMode() {
+            try {
+                if (!currentScreenId) {
+                    showResult('result-display', '⚠ No screen ID available. Run "Test Basic Connection" first!', 'warning');
+                    return;
+                }
+                if (!api) initAxios();
+                
+                showResult('result-display', `Testing gamma setting for screen ${currentScreenId}...`, 'info');
+                
+                // Test gamma since blackout/freeze don't exist
+                const response = await api.put('/screen/gamma', {
+                    screenIdList: [currentScreenId],
+                    gamma: 2.2
+                });
+                
+                if (response.data.code === 0) {
+                    showResult('result-display', `✓ Gamma set to 2.2\nNote: Blackout/Freeze endpoints do not exist in COEX API\n${JSON.stringify(response.data, null, 2)}`, 'success');
+                } else {
+                    showResult('result-display', `Failed: ${response.data.message}`, 'error');
+                }
+            } catch (error) {
+                showResult('result-display', `✗ Failed: ${error.message}`, 'error');
+            }
+        }
+        
+        async function runAllTests() {
+            console.log('Running all tests...');
+            await testBasicConnection();
+            await new Promise(r => setTimeout(r, 500));
+            await testGetScreens();
+            await new Promise(r => setTimeout(r, 500));
+            await testGetInputs();
+            await new Promise(r => setTimeout(r, 500));
+            await testGetLayers();
+            await new Promise(r => setTimeout(r, 500));
+            await testGetPresets();
+            await new Promise(r => setTimeout(r, 500));
+            await testGetCabinets();
+            console.log('All tests completed!');
+        }
+        
+        // Auto-focus on IP field
+        document.getElementById('ipAddress').focus();
+    </script>
+</body>
+</html>

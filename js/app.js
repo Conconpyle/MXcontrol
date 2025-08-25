@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     layerManager.init();
     
     // Set default values
-    document.getElementById('ipAddress').value = localStorage.getItem('lastIP') || '192.168.1.100';
-    document.getElementById('port').value = localStorage.getItem('lastPort') || '9999';
+    document.getElementById('ipAddress').value = localStorage.getItem('lastIP') || '10.0.0.22';
+    document.getElementById('port').value = localStorage.getItem('lastPort') || '8001';
     
     // Save connection details on successful connection
     const originalConnect = uiManager.handleConnect.bind(uiManager);

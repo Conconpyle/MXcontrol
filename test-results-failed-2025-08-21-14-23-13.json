@@ -1,0 +1,483 @@
+﻿[
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "getCabinets",
+        "timestamp":  "2025-08-21 14:23:07",
+        "description":  "Retrieve All Cabinet Information",
+        "duration":  "4ms",
+        "method":  "GET",
+        "endpoint":  "/cabinet?screenID={7e9cd858-780b-40d1-9f20-0fa0d53a06ce}"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "enableCabinetMapping",
+        "timestamp":  "2025-08-21 14:23:07",
+        "description":  "Enable Cabinet Mapping",
+        "duration":  "42ms",
+        "method":  "PUT",
+        "endpoint":  "/cabinet/mapping"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setEDID",
+        "timestamp":  "2025-08-21 14:23:08",
+        "description":  "Set EDID",
+        "duration":  "43ms",
+        "method":  "PUT",
+        "endpoint":  "/input/edid"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setColorTemperature",
+        "timestamp":  "2025-08-21 14:23:08",
+        "description":  "Set Screen Color Temperature",
+        "duration":  "43ms",
+        "method":  "PUT",
+        "endpoint":  "/screen/colorTemperature"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "getInputData",
+        "timestamp":  "2025-08-21 14:23:08",
+        "description":  "Retrieve Input Data",
+        "duration":  "1ms",
+        "method":  "GET",
+        "endpoint":  "/input?screenID={7e9cd858-780b-40d1-9f20-0fa0d53a06ce}"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setSaturation",
+        "timestamp":  "2025-08-21 14:23:08",
+        "description":  "Set Saturation",
+        "duration":  "44ms",
+        "method":  "PUT",
+        "endpoint":  "/input/saturation"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setColorHighlight",
+        "timestamp":  "2025-08-21 14:23:08",
+        "description":  "Set Color Highlight",
+        "duration":  "42ms",
+        "method":  "PUT",
+        "endpoint":  "/input/colorHighlight"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setColorShadow",
+        "timestamp":  "2025-08-21 14:23:09",
+        "description":  "Set Color Shadow",
+        "duration":  "43ms",
+        "method":  "PUT",
+        "endpoint":  "/input/colorShadow"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "adjustHue",
+        "timestamp":  "2025-08-21 14:23:09",
+        "description":  "Adjust Hue",
+        "duration":  "45ms",
+        "method":  "PUT",
+        "endpoint":  "/input/hue"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "resetColorAdjustment",
+        "timestamp":  "2025-08-21 14:23:09",
+        "description":  "Reset Color Adjustment",
+        "duration":  "42ms",
+        "method":  "POST",
+        "endpoint":  "/input/colorReset"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setSendingCardTestPattern",
+        "timestamp":  "2025-08-21 14:23:09",
+        "description":  "Set Test Pattern",
+        "duration":  "44ms",
+        "method":  "PUT",
+        "endpoint":  "/device/testpattern"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setHDRMode",
+        "timestamp":  "2025-08-21 14:23:09",
+        "description":  "Set HDR Mode",
+        "duration":  "43ms",
+        "method":  "PUT",
+        "endpoint":  "/input/hdr"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setCustomGamut",
+        "timestamp":  "2025-08-21 14:23:09",
+        "description":  "Set Custom Gamut",
+        "duration":  "42ms",
+        "method":  "PUT",
+        "endpoint":  "/screen/gamut/custom"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "switchColorGamut",
+        "timestamp":  "2025-08-21 14:23:10",
+        "description":  "Switch Color Gamut",
+        "duration":  "42ms",
+        "method":  "PUT",
+        "endpoint":  "/screen/gamut"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "getDisplayEffectParams",
+        "timestamp":  "2025-08-21 14:23:10",
+        "description":  "Retrieve Screen Display Effect Parameters",
+        "duration":  "1ms",
+        "method":  "GET",
+        "endpoint":  "/screen/displayEffect?screenId={7e9cd858-780b-40d1-9f20-0fa0d53a06ce}"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setCanvasMapping",
+        "timestamp":  "2025-08-21 14:23:10",
+        "description":  "Canvas Mapping",
+        "duration":  "45ms",
+        "method":  "PUT",
+        "endpoint":  "/screen/canvas/mapping"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "modifyPreset",
+        "timestamp":  "2025-08-21 14:23:10",
+        "description":  "Modify Preset",
+        "duration":  "45ms",
+        "method":  "PUT",
+        "endpoint":  "/preset/modify"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "getSchedules",
+        "timestamp":  "2025-08-21 14:23:10",
+        "description":  "Retrieve All Schedule Information",
+        "duration":  "2ms",
+        "method":  "GET",
+        "endpoint":  "/screen/schedules?screenId={7e9cd858-780b-40d1-9f20-0fa0d53a06ce}"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setScheduleState",
+        "timestamp":  "2025-08-21 14:23:10",
+        "description":  "Set Schedule On/Off",
+        "duration":  "49ms",
+        "method":  "PUT",
+        "endpoint":  "/screen/schedule/state"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "deleteBrightnessSchedule",
+        "timestamp":  "2025-08-21 14:23:10",
+        "description":  "Delete Brightness Schedule",
+        "duration":  "42ms",
+        "method":  "DELETE",
+        "endpoint":  "/screen/schedule/brightness"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "enable3DEmitter",
+        "timestamp":  "2025-08-21 14:23:11",
+        "description":  "Enable 3D Emitter",
+        "duration":  "43ms",
+        "method":  "PUT",
+        "endpoint":  "/screen/3d/emitter"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "set3DMode",
+        "timestamp":  "2025-08-21 14:23:11",
+        "description":  "Enable/Disable 3D",
+        "duration":  "44ms",
+        "method":  "PUT",
+        "endpoint":  "/screen/3d"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setMultiModeByScreens",
+        "timestamp":  "2025-08-21 14:23:11",
+        "description":  "Set Multi-mode by Screens",
+        "duration":  "47ms",
+        "method":  "PUT",
+        "endpoint":  "/screen/multiMode"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "getDisplayStatus",
+        "timestamp":  "2025-08-21 14:23:11",
+        "description":  "Retrieve Display Status",
+        "duration":  "1ms",
+        "method":  "GET",
+        "endpoint":  "/screen/displayStatus?screenId={7e9cd858-780b-40d1-9f20-0fa0d53a06ce}"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setOutputBitDepth",
+        "timestamp":  "2025-08-21 14:23:11",
+        "description":  "Set Output Bit Depth",
+        "duration":  "43ms",
+        "method":  "PUT",
+        "endpoint":  "/screen/output/bitDepth"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "getScreenProperties",
+        "timestamp":  "2025-08-21 14:23:11",
+        "description":  "Retrieve Screen Properties Information",
+        "duration":  "1ms",
+        "method":  "GET",
+        "endpoint":  "/screen/properties?screenId={7e9cd858-780b-40d1-9f20-0fa0d53a06ce}"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "getNumberOfCabinets",
+        "timestamp":  "2025-08-21 14:23:11",
+        "description":  "Retrieve Number of Cabinets",
+        "duration":  "1ms",
+        "method":  "GET",
+        "endpoint":  "/screen/cabinets/count?screenId={7e9cd858-780b-40d1-9f20-0fa0d53a06ce}"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "deviceIdentify",
+        "timestamp":  "2025-08-21 14:23:12",
+        "description":  "Device Identify",
+        "duration":  "41ms",
+        "method":  "PUT",
+        "endpoint":  "/device/identify"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "getMonitoringInfo",
+        "timestamp":  "2025-08-21 14:23:12",
+        "description":  "Retrieve Real-Time Monitoring Information",
+        "duration":  "1ms",
+        "method":  "GET",
+        "endpoint":  "/device/monitoring"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setCabinetRGBBrightness",
+        "timestamp":  "2025-08-21 14:23:12",
+        "description":  "Set Cabinet RGB Brightness",
+        "duration":  "44ms",
+        "method":  "PUT",
+        "endpoint":  "/cabinet/brightness/rgb"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setCabinetBrightness",
+        "timestamp":  "2025-08-21 14:23:12",
+        "description":  "Set Cabinet Brightness",
+        "duration":  "45ms",
+        "method":  "PUT",
+        "endpoint":  "/cabinet/brightness"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setCabinetColorTemperature",
+        "timestamp":  "2025-08-21 14:23:12",
+        "description":  "Adjust Cabinet Color Temperature",
+        "duration":  "45ms",
+        "method":  "PUT",
+        "endpoint":  "/cabinet/colorTemperature"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setReceivingCardTestPattern",
+        "timestamp":  "2025-08-21 14:23:12",
+        "description":  "Set Receiving Card Test Pattern",
+        "duration":  "42ms",
+        "method":  "PUT",
+        "endpoint":  "/cabinet/testPattern"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "setMultiModeByCabinets",
+        "timestamp":  "2025-08-21 14:23:13",
+        "description":  "Set Multi-mode by Cabinets",
+        "duration":  "43ms",
+        "method":  "PUT",
+        "endpoint":  "/cabinet/multiMode"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "moveCabinet",
+        "timestamp":  "2025-08-21 14:23:13",
+        "description":  "Move Cabinet",
+        "duration":  "43ms",
+        "method":  "PUT",
+        "endpoint":  "/cabinet/move"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "set3DLUTStrength",
+        "timestamp":  "2025-08-21 14:23:13",
+        "description":  "Set 3D LUT Strength",
+        "duration":  "43ms",
+        "method":  "PUT",
+        "endpoint":  "/screen/3dlut/strength"
+    },
+    {
+        "error":  {
+                      "status":  404,
+                      "message":  "The remote server returned an error: (404) Not Found.",
+                      "statusText":  "Not Found"
+                  },
+        "name":  "enable3DLUT",
+        "timestamp":  "2025-08-21 14:23:13",
+        "description":  "Enable 3D LUT",
+        "duration":  "44ms",
+        "method":  "PUT",
+        "endpoint":  "/screen/3dlut/enable"
+    }
+]
